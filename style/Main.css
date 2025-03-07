@@ -1,0 +1,468 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background: url('../assets/img/space-1164579_1920.png') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(222, 222, 222);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(17, 17, 17, 0.9);
+}
+
+.header__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.header__nav {
+    width: 100%;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    color: #FFA500;
+}
+
+/* Sección principal */
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.intro {
+    margin-bottom: 40px;
+}
+
+.intro__title {
+    font-size: 2.5rem;
+}
+
+.intro__text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Sección de enlaces */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.links__card {
+    background-color: rgb(222, 222, 222);
+    color:  rgba(17, 17, 17, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.links__image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.links__title {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.links__button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.links__button:hover {
+    background-color: #FFA500;
+}
+
+/* Sección de Personajes */
+.characters__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin: 2%;
+    justify-content: center;
+}
+
+.character-card {
+    flex: 1 1 calc(40% - 20px); /* Máximo dos tarjetas por fila */
+    max-width: calc(40% - 20px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+.character-card__image {
+    object-fit:scale-down;
+    width: 30vh;
+    height: 30vh;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+}
+
+.character-card__name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    background: rgba(17, 17, 17, 0.85);
+    padding: 15px;
+    border-right: 2px solid #FFD700;
+    text-align: left;
+}
+
+.sidebar__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar__link {
+    color: #FFD700;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.sidebar__link:hover {
+    color: #FFA500;
+}
+
+/* Formulario estilo Star Wars */
+.contacto {
+    background: rgba(17, 17, 17, 0.85);
+    padding: 25px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacto__title {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 1);
+    }
+}
+
+.contacto__form {
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.contacto_label {
+    margin: 2%;
+    font-weight: bold;
+    color:  #FFD700;
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.contacto_input, .contacto_faccion, .contacto_mensaje {
+    margin-top: 2%;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.contacto_input:focus, .contacto_faccion:focus, .contacto_mensaje:focus {
+    border-color: #FFA500;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
+    transform: scale(1.02);
+}
+
+.contacto_checkbox_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: #FFD700;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contacto_checkbox {
+    margin-top: 2%;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FFD700;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contacto_checkbox:checked {
+    background: #FFD700;
+}
+
+.contacto_checkbox:checked::after {
+    content: "✓";
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto__button {
+    margin-top: 2%;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto__button:hover {
+    background: linear-gradient(45deg, #FFA500, #FF4500);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.9);
+    transform: scale(1.05);
+}
+
+
+
+/* Interruptor Light Mode */
+.theme-switch {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+/* Estilo del slider (fondo del interruptor) */
+.theme-switch .slider {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 25px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+/* La perilla deslizante */
+.theme-switch .slider::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Cuando está activado */
+.theme-switch input:checked + .slider {
+    background-color: #FFD700;
+}
+
+.theme-switch input:checked + .slider::before {
+    transform: translateX(25px);
+}
+
+/* Pie de página */
+.footer {
+    background-color: rgba(17, 17, 17, 0.9);
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer__social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer__link:hover {
+    color: #FFA500;
+}
+
+.footer__cta a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFD700;
+    font-size: 1rem;
+}
+
+.footer__cta a:hover {
+    color: #FFA500;
+}
+
+/* Animación de desvanecimiento (fade-out) */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animación de aparición (fade-in) */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

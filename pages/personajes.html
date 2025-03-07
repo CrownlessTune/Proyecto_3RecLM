@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/Main.css">
+    <title>Leyendas De La Galaxia</title>
+    <script src="../js/Scripts.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado de la web, con el título y la navegación -->
+    <header class="header">
+        <label class="theme-switch" aria-label="Cambiar tema">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <h1 class="header__title">Leyendas De La Galaxia</h1>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../Main.html" class="nav__link">Templo Jedi</a></li>
+                <li class="nav__item"><a href="personajes.html" class="nav__link">Leyendas</a></li>
+                <li class="nav__item"><a href="registro.html" class="nav__link">Sé un Jedi o Sith</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Barra lateral para filtrar personajes -->
+        <aside class="sidebar">
+            <h2 class="sidebar__title">Filtrar por:</h2>
+            <ul class="sidebar__list">
+                <li><a href="#Heroes" class="sidebar__link">Héroes</a></li>
+                <li><a href="#Villains" class="sidebar__link">Villanos</a></li>
+                <li><a href="#Droids" class="sidebar__link">Droides</a></li>
+            </ul>
+        </aside>
+
+        <!-- Sección de personajes -->
+        <section class="characters">
+            <h2 id="Heroes" class="characters__title">Héroes</h2>
+            <div id="heroes-gallery" class="characters__group">
+                <!-- Las imágenes de los héroes irán aquí -->
+            </div>
+
+            <button id="add-hero-btn">Añadir Héroe</button>
+            <button id="remove-hero-btn">Eliminar Héroe</button>
+        </section>
+
+        <section class="characters">
+            <h2 id="Villains" class="characters__title">Villanos</h2>
+            <div id="villains-gallery" class="characters__group">
+                <!-- Las imágenes de los villanos irán aquí -->
+            </div>
+
+            <button id="add-villain-btn">Añadir Villano</button>
+            <button id="remove-villain-btn">Eliminar Villano</button>
+        </section>
+
+        <section class="characters">
+            <h2 id="Droids" class="characters__title">Droides</h2>
+            <div id="droids-gallery" class="characters__group">
+                <!-- Las imágenes de los droides irán aquí -->
+            </div>
+
+            <button id="add-droid-btn">Añadir Droid</button>
+            <button id="remove-droid-btn">Eliminar Droid</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2025 Star Wars Fan Page - No afiliado con Lucasfilm</p>
+        <ul class="footer__social">
+            <li><a href="https://facebook.com" target="_blank" class="footer__link">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_parent" class="footer__link">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_self" class="footer__link">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

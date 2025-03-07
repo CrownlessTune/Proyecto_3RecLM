@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>These Aren't The Droids You Were Looking For</title> <!-- Un clásico de Obi-Wan -->
+    <script src="./js/Scripts.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__title">These Aren't The Droids You Were Looking For</h1>
+
+        <!-- Interruptor Light Mode - Para cambiar entre el Lado Luminoso y el Lado Oscuro -->
+        <label class="theme-switch" aria-label="Cambiar tema">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <!-- Un atajo al Templo Jedi, donde la Fuerza fluye con armonía -->
+                <li class="nav__item"><a href="Main.html" class="nav__link">Templo Jedi</a></li>
+                <!-- Explora las historias de los héroes y villanos más legendarios de la galaxia -->
+                <li class="nav__item"><a href="./pages/personajes.html" class="nav__link">Leyendas</a></li>
+                <!-- ¿Quieres unirte a la batalla? ¡Regístrate y elige tu destino! -->
+                <li class="nav__item"><a href="./pages/registro.html" class="nav__link">Sé un Jedi o Sith</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <h2 class="intro__title">Bienvenido a una galaxia muy muy lejana</h2>
+            <p class="intro__text">Explora a tus personajes favoritos de Star Wars o vuélvete una leyenda como un Jedi o Sith.</p>
+        </section>
+
+        <section class="links">
+            <div class="links__card">
+                <!-- Aquí Boba Fett, listo para la cacería de recompensas -->
+                <img src="./assets/icon/Star_Wars_Boba Fett.svg" alt="Personajes de Star Wars" class="links__image">
+                <a href="./pages/personajes.html" class="links__button">Explora A Las Leyendas</a>
+            </div>
+            <div class="links__card">
+                <!-- C-3PO siempre listo para traducir protocolos galácticos -->
+                <img src="./assets/icon/Star_Wars_C3PO.svg" alt="Formulario de Registro" class="links__image">
+                <a href="./pages/registro.html" class="links__button">Únete A La Fuerza</a>
+            </div>
+        </section>
+
+        <button id="sith-button" class="links__button">Soy un Sith, elimíname</button>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2025 Star Wars Fan Page - No afiliado con Lucasfilm</p>
+        <ul class="footer__social">
+            <!-- Aquí van los enlaces a las redes sociales, para que la Resistencia y el Imperio se mantengan informados -->
+            <li><a href="https://facebook.com" target="_blank" class="footer__link">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_parent" class="footer__link">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_self" class="footer__link">Instagram</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

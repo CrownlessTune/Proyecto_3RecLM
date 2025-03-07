@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Contacta con la Fuerza</title>
+    <script src="../js/Scripts.js"></script>
+
+</head>
+<body>
+    <!-- Encabezado con título y menú de navegación -->
+    <header class="header">
+        <h1 class="header__title">Contacta con la Fuerza</h1>
+        
+        <!-- Interruptor para cambiar entre el Lado Luminoso y el Oscuro -->
+        <label class="theme-switch" aria-label="Cambiar tema">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        
+        <!-- Menú de navegación principal -->
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../Main.html" class="nav__link">Templo Jedi</a></li>
+                <li class="nav__item"><a href="./personajes.html" class="nav__link">Leyendas</a></li>
+                <li class="nav__item"><a href="./registro.html" class="nav__link">Sé un Jedi o Sith</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Sección de contacto para enviar mensajes a la galaxia -->
+        <section class="contacto">
+            <h2 class="contacto__title">Envía tu mensaje a la galaxia</h2>
+            
+            <form action="#" method="POST" class="contacto__form">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="contacto_input" name="nombre" required>
+                
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="contacto_input" name="email" required>
+                
+                <label for="asunto">Asunto</label>
+                <input type="text" class="contacto_input" name="asunto" required>
+                
+                <label for="faccion">¿Eres Jedi o un Sith?</label>
+                <select class="contacto_faccion" name="faccion">
+                    <option value="jedi">Jedi</option>
+                    <option value="sith">Sith</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+                
+                <label for="mensaje">Mensaje</label>
+                <textarea class="contacto_mensaje" name="mensaje" rows="5" required></textarea>
+                
+                <!-- Casilla de verificación para asegurarse de que el usuario acepta su destino -->
+                <label>
+                    <input class="contacto_checkbox" type="checkbox" name="confirmacion" required>
+                    Acepto el código de la Orden Jedi o la Regla de Dos Sith.
+                </label>
+                
+                <!-- Botón para enviar el mensaje al consejo Jedi o al Emperador -->
+                <button type="submit" class="contacto__button">Enviar holomensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer con derechos y enlaces a redes sociales -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Star Wars Fan Page - No afiliado con Lucasfilm</p>
+        <ul class="footer__social">
+            <li><a href="https://facebook.com" target="_blank" class="footer__link">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_parent" class="footer__link">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_self" class="footer__link">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
